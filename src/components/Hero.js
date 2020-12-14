@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "uppercase",
     backgroundColor: theme.palette.primary.main,
     padding: theme.spacing(1),
+    boxDecorationBreak: "clone",
   },
   detailTypography: {
     textTransform: "uppercase",
@@ -37,17 +38,17 @@ function Hero() {
   return (
     <Paper className={classes.root}>
       <div className={classes.overlay} />
-      <Grid container spacing={4}>
+      <Grid container spacing={4} direction="column">
         <Grid item xs={12}>
           <Typography
             display="inline"
             className={classes.introTypography}
             variant="h2"
           >
-            I'm Julian.
+            I'm Julian
           </Typography>
         </Grid>
-        <Grid item md={12}>
+        <Grid item md={6}>
           <Typography display="inline" className={classes.detailTypography}>
             I go by many things, a software engineer, web developer, guitar
             player and finance enthusiast.
