@@ -1,14 +1,19 @@
 import {
   AppBar as MUIAppBar,
+  Link,
   makeStyles,
   Toolbar,
   Typography,
 } from "@material-ui/core";
-import { EmojiEmotionsOutlined } from "@material-ui/icons";
+import { EmojiEmotionsOutlined, LinkedIn } from "@material-ui/icons";
+import { LINKED_IN_LINK } from "../utils/constants";
 
 const useStyles = makeStyles((theme) => ({
   left: {
     marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
   },
 }));
 
@@ -18,7 +23,12 @@ function AppBar() {
     <MUIAppBar position="static">
       <Toolbar>
         <EmojiEmotionsOutlined className={classes.left} />
-        <Typography variant="h6">Julianism</Typography>
+        <Typography className={classes.title} variant="h6">
+          Julianism
+        </Typography>
+        <Link target="_blank" href={LINKED_IN_LINK} color="inherit">
+          <LinkedIn />
+        </Link>
       </Toolbar>
     </MUIAppBar>
   );
