@@ -1,5 +1,5 @@
 import AppBar from "./components/AppBar";
-import Home from "./containers/Home";
+import Home from "./containers/Home/Home";
 
 function App() {
   return (

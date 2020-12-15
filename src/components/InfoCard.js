@@ -1,5 +1,5 @@
+import React from "react";
 import { Grid, makeStyles, Typography } from "@material-ui/core";
-import programming from "../images/programming.svg";
 
 const useStyles = makeStyles((theme) => ({
   image: {
@@ -18,47 +18,43 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function InfoCard() {
+const getTypographySections = (sections) => {
+  const result = [];
+  for (const section of sections) {
+    result.push(<Typography paragraph="true">{section}</Typography>);
+  }
+  return result;
+};
+
+export default function InfoCard(props) {
   const classes = useStyles();
 
   return (
-    <Grid container spacing={4} direction="row">
-      <Grid container item md={6} justify="center">
-        <img className={classes.image} src={programming} alt="programming" />
-      </Grid>
+    <>
       <Grid
         container
-        item
-        md={6}
-        spacing={2}
-        direction="column"
-        justify="center"
+        spacing={4}
+        direction={props.imageRight ? "row-reverse" : "row"}
       >
-        <Grid container item justify="center">
-          <Grid item>
-            <Typography
-              variant="h4"
-              display="inline"
-              className={classes.introTitle}
-            >
-              a software developer by profession.
-            </Typography>
-          </Grid>
+        <Grid container item md={6} justify="center">
+          <img className={classes.image} src={props.image} alt="programming" />
         </Grid>
-        <Grid item>
-          <Typography paragraph="true">
-            I have about a year of professional experience as a software
-            engineer. I've worked with <b>AngularJS</b>, <b>Grails</b> using{" "}
-            <b>Java</b> and <b>Groovy</b>.
-          </Typography>
-          <Typography>
-            In my spare time, I enjoy learning new technologies on the side.
-            I've been enjoying <b>React</b> and <b>Serverless Architecture</b>.
-          </Typography>
+
+        <Grid container item md={6} direction="column" justify="center">
+          <Grid container item justify="center">
+            <Grid item>
+              <Typography
+                variant="h4"
+                display="inline"
+                className={classes.introTitle}
+              >
+                {props.title}
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid item>{getTypographySections(props.sections)}</Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 }
-
-export default InfoCard;
