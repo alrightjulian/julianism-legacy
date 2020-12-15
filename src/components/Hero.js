@@ -4,7 +4,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
     padding: theme.spacing(4),
-    marginBottom: theme.spacing(4),
     backgroundImage:
       "url(https://images.unsplash.com/photo-1519181258491-889c2b001485?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)",
     backgroundSize: "cover",
@@ -45,7 +44,7 @@ function Hero() {
             className={classes.introTypography}
             variant="h2"
           >
-            I'm Julian
+            I'm Julian.
           </Typography>
         </Grid>
         <Grid item md={6}>
