@@ -6,18 +6,21 @@ export const PROGRAMMING_SECTIONS = [
     <b>Groovy</b>. I'm also a <b>AWS Certified Cloud Practitioner</b>.
   </>,
   <>
-    In my spare time, I enjoy learning exciting technologies on the side. I've
-    been enjoying <b>React</b> and <b>Serverless Architecture</b>.
+    In my spare time, I enjoy learning other exciting technologies on the side.
+    I've been enjoying <b>React</b> and <b>Serverless Architecture</b>.
   </>,
-  <>Currently I'm looking for exciting offers.</>,
+  <>Currently I'm looking for exciting opportunities and offers.</>,
 ];
 
 export const MUSIC_TITLE = "Guitarist at heart.";
 export const MUSIC_SECTIONS = [
   <>
-    I have about a year of professional experience as a software engineer. I've
-    worked with <b>AngularJS</b>, <b>Grails</b> using <b>Java</b> and{" "}
-    <b>Groovy</b>
+    I have been playing <b>guitar</b> and <b>ukulele</b> for about 5 years.
+    Making my own album is one of my life-long goals.
+  </>,
+  <>
+    I love just about any genre but my favorites are desert rock, jazz and doom
+    metal.
   </>,
 ];
 

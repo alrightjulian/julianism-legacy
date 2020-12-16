@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     boxDecorationBreak: "clone",
   },
-  detailTypography: {
+  subIntroTypography: {
     textTransform: "uppercase",
     backgroundColor: theme.palette.secondary.main,
     color: theme.palette.secondary.contrastText,
@@ -53,10 +53,10 @@ function Hero() {
           <Typography
             display="inline"
             variant="body1"
-            className={classes.detailTypography}
+            className={classes.subIntroTypography}
           >
-            I go by many things, a software engineer, web developer, guitar
-            player and finance enthusiast.
+            I go by many things, a software engineer, guitar player and finance
+            enthusiast.
           </Typography>
         </Grid>
       </Grid>

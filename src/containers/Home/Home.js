@@ -1,5 +1,5 @@
 import { Button, Container, Grid, makeStyles } from "@material-ui/core";
-import { Aws } from "mdi-material-ui";
+import { Aws, Spotify } from "mdi-material-ui";
 import Hero from "../../components/Hero";
 import InfoCard from "../../components/InfoCard";
 import programming from "../../images/programming.svg";
@@ -17,6 +17,7 @@ import {
   AWS_TRANSCRIPT_LINK,
   GITHUB_LINK,
   LINKED_IN_LINK,
+  SPOTIFY_PLAYLIST_LINK,
 } from "../../utils/constants";
 import { GitHub, LinkedIn } from "@material-ui/icons";
 
@@ -77,7 +78,20 @@ function Home() {
           sections={MUSIC_SECTIONS}
           image={music}
           imageRight={false}
-        />
+        >
+          <Grid container spacing={2}>
+            <Grid item>
+              <Button
+                href={SPOTIFY_PLAYLIST_LINK}
+                target="_blank"
+                variant="contained"
+                color="secondary"
+              >
+                <Spotify />
+              </Button>
+            </Grid>
+          </Grid>
+        </InfoCard>
         <InfoCard
           title={FINANCE_TITLE}
           sections={FINANCE_SECTIONS}
