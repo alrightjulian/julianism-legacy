@@ -4,9 +4,7 @@ import { Grid, makeStyles, Typography } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(8),
-    [theme.breakpoints.up("md")]: {
-      marginBottom: theme.spacing(8),
-    },
+    marginBottom: theme.spacing(8),
   },
   image: {
     width: "100%",
@@ -53,7 +51,14 @@ export default function InfoCard(props) {
         justify="center"
         spacing={4}
       >
-        <Grid container item xs={12} md={6} justify="center">
+        <Grid
+          container
+          item
+          xs={12}
+          md={6}
+          justify="center"
+          alignItems="center"
+        >
           <img className={classes.image} src={props.image} alt="programming" />
         </Grid>
 
