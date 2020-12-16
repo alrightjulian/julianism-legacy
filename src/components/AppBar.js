@@ -21,17 +21,20 @@ const useStyles = makeStyles((theme) => ({
 function AppBar() {
   const classes = useStyles();
   return (
-    <MUIAppBar position="static">
-      <Toolbar>
-        <EmojiEmotionsOutlined className={classes.left} />
-        <Typography className={classes.title} variant="h6">
-          Julianism
-        </Typography>
-        <Link target="_blank" href={LINKED_IN_LINK} color="inherit">
-          <LinkedIn />
-        </Link>
-      </Toolbar>
-    </MUIAppBar>
+    <>
+      <MUIAppBar position="fixed">
+        <Toolbar>
+          <EmojiEmotionsOutlined className={classes.left} />
+          <Typography className={classes.title} variant="h6">
+            Julianism
+          </Typography>
+          <Link target="_blank" href={LINKED_IN_LINK} color="inherit">
+            <LinkedIn />
+          </Link>
+        </Toolbar>
+      </MUIAppBar>
+      <Toolbar />
+    </>
   );
 }
 
