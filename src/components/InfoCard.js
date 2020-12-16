@@ -2,57 +2,83 @@ import React from "react";
 import { Grid, makeStyles, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    marginTop: theme.spacing(8),
+    [theme.breakpoints.up("md")]: {
+      marginBottom: theme.spacing(8),
+    },
+  },
   image: {
     width: "100%",
-    [theme.breakpoints.down("lg")]: {
-      padding: theme.spacing(4),
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: "80vw",
     },
-    maxWidth: "70vw",
+    [theme.breakpoints.up("sm")]: {
+      maxWidth: "60%",
+    },
   },
-  introTitle: {
+  infoTitle: {
     backgroundColor: theme.palette.primary.main,
     padding: theme.spacing(1),
     boxDecorationBreak: "clone",
     textTransform: "uppercase",
     lineHeight: theme.typography.h4.lineHeight * 1.3,
   },
+  infoDetail: {
+    fontWeight: "lighter",
+  },
 }));
-
-const getTypographySections = (sections) => {
-  const result = [];
-  for (const section of sections) {
-    result.push(<Typography paragraph="true">{section}</Typography>);
-  }
-  return result;
-};
 
 export default function InfoCard(props) {
   const classes = useStyles();
+
+  const getTypographySections = (sections) => {
+    const result = [];
+    for (const [index, section] of sections.entries()) {
+      result.push(
+        <Typography key={index} paragraph={true} className={classes.infoDetail}>
+          {section}
+        </Typography>
+      );
+    }
+    return result;
+  };
 
   return (
     <>
       <Grid
         container
-        spacing={4}
+        className={classes.root}
         direction={props.imageRight ? "row-reverse" : "row"}
+        justify="center"
+        spacing={4}
       >
-        <Grid container item md={6} justify="center">
+        <Grid container item xs={12} md={6} justify="center">
           <img className={classes.image} src={props.image} alt="programming" />
         </Grid>
 
-        <Grid container item md={6} direction="column" justify="center">
-          <Grid container item justify="center">
-            <Grid item>
-              <Typography
-                variant="h4"
-                display="inline"
-                className={classes.introTitle}
-              >
-                {props.title}
-              </Typography>
-            </Grid>
+        <Grid
+          container
+          item
+          xs={12}
+          md={6}
+          spacing={2}
+          direction="column"
+          justify="center"
+        >
+          <Grid item>
+            <Typography
+              variant="h5"
+              display="inline"
+              className={classes.infoTitle}
+            >
+              {props.title}
+            </Typography>
           </Grid>
-          <Grid item>{getTypographySections(props.sections)}</Grid>
+          <Grid item>
+            {getTypographySections(props.sections)}
+            {props.children}
+          </Grid>
         </Grid>
       </Grid>
     </>

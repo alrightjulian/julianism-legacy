@@ -25,10 +25,12 @@ const useStyles = makeStyles((theme) => ({
   },
   detailTypography: {
     textTransform: "uppercase",
-    backgroundColor: theme.palette.background.default,
+    backgroundColor: theme.palette.secondary.main,
+    color: theme.palette.secondary.contrastText,
     padding: theme.spacing(1),
     lineHeight: theme.typography.body1.lineHeight * 1.4,
     boxDecorationBreak: "clone",
+    fontWeight: "bold",
   },
 }));
 
@@ -42,13 +44,17 @@ function Hero() {
           <Typography
             display="inline"
             className={classes.introTypography}
-            variant="h2"
+            variant="h4"
           >
             I'm Julian.
           </Typography>
         </Grid>
         <Grid item md={6}>
-          <Typography display="inline" className={classes.detailTypography}>
+          <Typography
+            display="inline"
+            variant="body1"
+            className={classes.detailTypography}
+          >
             I go by many things, a software engineer, web developer, guitar
             player and finance enthusiast.
           </Typography>
