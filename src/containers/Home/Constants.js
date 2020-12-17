@@ -3,7 +3,7 @@ export const PROGRAMMING_SECTIONS = [
   <>
     I have about a year of professional experience as a software engineer. I've
     worked with <b>AngularJS</b>, <b>Grails</b> using <b>Java</b> and{" "}
-    <b>Groovy</b>. I'm also a <b>AWS Certified Cloud Practitioner</b>.
+    <b>Groovy</b>. I'm also an <b>AWS Certified Cloud Practitioner</b>.
   </>,
   <>
     In my spare time, I enjoy learning other exciting technologies on the side.
