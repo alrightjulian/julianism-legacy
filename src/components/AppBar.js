@@ -22,7 +22,7 @@ function AppBar() {
   const classes = useStyles();
   return (
     <>
-      <MUIAppBar position="fixed">
+      <MUIAppBar position="static">
         <Toolbar>
           <EmojiEmotionsOutlined className={classes.left} />
           <Typography className={classes.title} variant="h6">
@@ -33,7 +33,6 @@ function AppBar() {
           </Link>
         </Toolbar>
       </MUIAppBar>
-      <Toolbar />
     </>
   );
 }
