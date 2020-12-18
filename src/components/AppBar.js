@@ -1,7 +1,6 @@
 import {
   AppBar as MUIAppBar,
   IconButton,
-  Link,
   makeStyles,
   Toolbar,
   Typography,
