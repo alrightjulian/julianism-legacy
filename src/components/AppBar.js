@@ -1,11 +1,13 @@
 import {
   AppBar as MUIAppBar,
+  IconButton,
   Link,
   makeStyles,
   Toolbar,
   Typography,
 } from "@material-ui/core";
-import { EmojiEmotionsOutlined, LinkedIn } from "@material-ui/icons";
+import { EmojiEmotionsOutlined, LinkedIn, Send } from "@material-ui/icons";
+import { CONTACT_LINK } from "../containers/Home/Constants";
 import { LINKED_IN_LINK } from "../utils/constants";
 
 const useStyles = makeStyles((theme) => ({
@@ -28,9 +30,12 @@ function AppBar() {
           <Typography className={classes.title} variant="h6">
             Julianism
           </Typography>
-          <Link target="_blank" href={LINKED_IN_LINK} color="inherit">
+          <IconButton href={LINKED_IN_LINK} target="_blank" color="inherit">
             <LinkedIn />
-          </Link>
+          </IconButton>
+          <IconButton href={CONTACT_LINK} target="_blank" color="inherit">
+            <Send />
+          </IconButton>
         </Toolbar>
       </MUIAppBar>
     </>
