@@ -1,4 +1,4 @@
-import { Button, Container, Grid, makeStyles } from "@material-ui/core";
+import { Button, Container, Fab, Grid, makeStyles } from "@material-ui/core";
 import { Aws, Spotify } from "mdi-material-ui";
 import Hero from "../../components/Hero";
 import InfoCard from "../../components/InfoCard";
@@ -12,6 +12,7 @@ import {
   MUSIC_SECTIONS,
   FINANCE_TITLE,
   FINANCE_SECTIONS,
+  CONTACT_LINK,
 } from "./Constants";
 import {
   AWS_TRANSCRIPT_LINK,
@@ -19,12 +20,17 @@ import {
   LINKED_IN_LINK,
   SPOTIFY_PLAYLIST_LINK,
 } from "../../utils/constants";
-import { GitHub, LinkedIn } from "@material-ui/icons";
+import { GitHub, LinkedIn, Send } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
+  },
+  fab: {
+    position: "fixed",
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
   },
 }));
 
@@ -99,6 +105,15 @@ function Home() {
           imageRight={true}
         />
       </Container>
+      <Fab
+        className={classes.fab}
+        href={CONTACT_LINK}
+        target="_blank"
+        color="secondary"
+        disableFocusRipple={true}
+      >
+        <Send />
+      </Fab>
     </>
   );
 }

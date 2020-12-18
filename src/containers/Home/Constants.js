@@ -31,3 +31,5 @@ export const FINANCE_SECTIONS = [
     budgeting, spending, investing in my personal life.
   </>,
 ];
+
+export const CONTACT_LINK = "https://forms.gle/XXnMuwVbGtfKj2vz8";
