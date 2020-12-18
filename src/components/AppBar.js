@@ -30,10 +30,20 @@ function AppBar() {
           <Typography className={classes.title} variant="h6">
             Julianism
           </Typography>
-          <IconButton href={LINKED_IN_LINK} target="_blank" color="inherit">
+          <IconButton
+            href={LINKED_IN_LINK}
+            target="_blank"
+            color="inherit"
+            disableFocusRipple={true}
+          >
             <LinkedIn />
           </IconButton>
-          <IconButton href={CONTACT_LINK} target="_blank" color="inherit">
+          <IconButton
+            href={CONTACT_LINK}
+            target="_blank"
+            color="inherit"
+            disableFocusRipple={true}
+          >
             <Send />
           </IconButton>
         </Toolbar>
