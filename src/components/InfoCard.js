@@ -21,6 +21,8 @@ const useStyles = makeStyles((theme) => ({
     boxDecorationBreak: "clone",
     textTransform: "uppercase",
     lineHeight: theme.typography.h4.lineHeight * 1.3,
+    textAlign: "center",
+    flexGrow: 1,
   },
   infoDetail: {
     fontWeight: "lighter",
@@ -34,7 +36,12 @@ export default function InfoCard(props) {
     const result = [];
     for (const [index, section] of sections.entries()) {
       result.push(
-        <Typography key={index} paragraph={true} className={classes.infoDetail}>
+        <Typography
+          variant="body1"
+          key={index}
+          paragraph={true}
+          className={classes.infoDetail}
+        >
           {section}
         </Typography>
       );
@@ -71,9 +78,10 @@ export default function InfoCard(props) {
           direction="column"
           justify="center"
         >
-          <Grid item>
+          <Grid container item>
             <Typography
               variant="h5"
+              component="h2"
               display="inline"
               className={classes.infoTitle}
             >

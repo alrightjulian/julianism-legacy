@@ -1,4 +1,4 @@
-export const PROGRAMMING_TITLE = "Software engineer by profession.";
+export const PROGRAMMING_TITLE = "Software engineer by profession";
 export const PROGRAMMING_SECTIONS = [
   <>
     I have about a year of professional experience as a software engineer. I've
@@ -12,7 +12,7 @@ export const PROGRAMMING_SECTIONS = [
   <>Currently I'm looking for exciting opportunities and offers.</>,
 ];
 
-export const MUSIC_TITLE = "Guitarist at heart.";
+export const MUSIC_TITLE = "Guitarist at heart";
 export const MUSIC_SECTIONS = [
   <>
     I have been playing <b>guitar</b> and <b>ukulele</b> for about 5 years.
@@ -24,7 +24,7 @@ export const MUSIC_SECTIONS = [
   </>,
 ];
 
-export const FINANCE_TITLE = "Personal finance enthusiast.";
+export const FINANCE_TITLE = "Personal finance enthusiast";
 export const FINANCE_SECTIONS = [
   <>
     I enjoy learning about <b>personal finanace</b>. I value well-planned

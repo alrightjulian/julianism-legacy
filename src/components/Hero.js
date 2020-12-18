@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
     color: theme.palette.secondary.contrastText,
     padding: theme.spacing(1),
-    lineHeight: theme.typography.body1.lineHeight * 1.4,
+    lineHeight: theme.typography.h6.lineHeight * 1.2,
     boxDecorationBreak: "clone",
     fontWeight: "bold",
   },
@@ -45,6 +45,7 @@ function Hero() {
             display="inline"
             className={classes.introTypography}
             variant="h4"
+            component="h2"
           >
             I'm Julian.
           </Typography>
@@ -52,7 +53,8 @@ function Hero() {
         <Grid item md={6}>
           <Typography
             display="inline"
-            variant="body1"
+            variant="h6"
+            component="h3"
             className={classes.subIntroTypography}
           >
             I go by many things, a software engineer, guitar player and finance
