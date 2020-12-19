@@ -27,7 +27,7 @@ export const MUSIC_SECTIONS = [
 export const FINANCE_TITLE = "Personal finance enthusiast";
 export const FINANCE_SECTIONS = [
   <>
-    I enjoy learning about <b>personal finanace</b>. I value well-planned
+    I enjoy learning about <b>personal finance</b>. I value well-planned
     budgeting, spending and investing in my personal life.
   </>,
 ];
