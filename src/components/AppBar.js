@@ -6,8 +6,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import { EmojiEmotionsOutlined, LinkedIn, Send } from "@material-ui/icons";
-import { CONTACT_LINK } from "../containers/Home/Constants";
-import { LINKED_IN_LINK } from "../utils/constants";
+import { LINKED_IN_LINK, CONTACT_LINK } from "../utils/constants";
 
 const useStyles = makeStyles((theme) => ({
   left: {

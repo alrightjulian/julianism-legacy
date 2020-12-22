@@ -2,19 +2,9 @@ import { Button, Container, Fab, Grid, makeStyles } from "@material-ui/core";
 import { Aws, Spotify } from "mdi-material-ui";
 import Hero from "../../components/Hero";
 import InfoCard from "../../components/InfoCard";
-import programming from "../../images/programming.svg";
-import music from "../../images/music.svg";
-import finance from "../../images/finance.svg";
+import { INFO_CARD_DATA } from "./Constants";
 import {
-  PROGRAMMING_SECTIONS,
-  PROGRAMMING_TITLE,
-  MUSIC_TITLE,
-  MUSIC_SECTIONS,
-  FINANCE_TITLE,
-  FINANCE_SECTIONS,
   CONTACT_LINK,
-} from "./Constants";
-import {
   AWS_TRANSCRIPT_LINK,
   GITHUB_LINK,
   LINKED_IN_LINK,
@@ -36,14 +26,15 @@ const useStyles = makeStyles((theme) => ({
 
 function Home() {
   const classes = useStyles();
+  const data = INFO_CARD_DATA;
   return (
     <>
       <Hero />
       <Container className={classes.container}>
         <InfoCard
-          title={PROGRAMMING_TITLE}
-          sections={PROGRAMMING_SECTIONS}
-          image={programming}
+          title={data.programming.title}
+          sections={data.programming.sections}
+          image={data.programming.image}
           imageRight={true}
         >
           <Grid container spacing={2}>
@@ -80,9 +71,9 @@ function Home() {
           </Grid>
         </InfoCard>
         <InfoCard
-          title={MUSIC_TITLE}
-          sections={MUSIC_SECTIONS}
-          image={music}
+          title={data.music.title}
+          sections={data.music.sections}
+          image={data.music.image}
           imageRight={false}
         >
           <Grid container spacing={2}>
@@ -99,9 +90,9 @@ function Home() {
           </Grid>
         </InfoCard>
         <InfoCard
-          title={FINANCE_TITLE}
-          sections={FINANCE_SECTIONS}
-          image={finance}
+          title={data.finance.title}
+          sections={data.finance.sections}
+          image={data.finance.image}
           imageRight={true}
         />
       </Container>
